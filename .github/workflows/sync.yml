@@ -1,0 +1,27 @@
+name: Git Sync
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+  schedule:
+    - cron: '1 */3 * * *'
+
+jobs:
+  run:
+    name: Run
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source codes
+        uses: actions/checkout@v2
+      - name: Mirror Github to Gitee with white list
+        uses: Yikun/hub-mirror-action@master
+        with:
+          src: github/gclm
+          dst: gitee/gclm
+          dst_key: ${{ secrets.GITEE_PRIVATE_KEY }}
+          dst_token: ${{ secrets.GITEE_TOKEN }}
+          static_list: 'DoIt'
+          force_update: true
