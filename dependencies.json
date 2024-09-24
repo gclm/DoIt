@@ -17,7 +17,7 @@
         },
         {
             "name": "@waline/client",
-            "version": "3.3.0",
+            "version": "3.3.2",
             "files": [
                 {
                     "remote": "dist/waline.css",
@@ -71,7 +71,7 @@
         },
         {
             "name": "artalk",
-            "version": "2.9.0",
+            "version": "2.9.1",
             "files": [
                 {
                     "remote": "dist/Artalk.js",
@@ -93,7 +93,7 @@
         },
         {
             "name": "@artalk/plugin-katex",
-            "version": "0.2.2",
+            "version": "0.2.3",
             "files": [
                 {
                     "remote": "dist/artalk-plugin-katex.js",
@@ -123,7 +123,7 @@
         },
         {
             "name": "typeit",
-            "version": "8.8.4",
+            "version": "8.8.5",
             "files": [
                 {
                     "remote": "dist/index.umd.min.js",
