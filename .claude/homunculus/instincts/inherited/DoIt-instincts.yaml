@@ -1,0 +1,343 @@
+# Instincts generated from https://github.com/gclm/DoIt
+# Generated: 2026-06-03T06:16:51.513Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: DoIt-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/gclm/DoIt
+---
+
+# DoIt Commit Length
+
+## Action
+
+Write moderate-length commit messages (~70 characters)
+
+## Evidence
+
+- Average commit message length: 70 chars
+- Based on 8 commits
+
+---
+id: DoIt-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/DoIt
+---
+
+# DoIt Naming Files
+
+## Action
+
+Use camelCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: camelCase
+
+---
+id: DoIt-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/DoIt
+---
+
+# DoIt Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: DoIt-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/gclm/DoIt
+---
+
+# DoIt Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: DoIt-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/gclm/DoIt
+---
+
+# DoIt Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: DoIt-workflow-dependency-update-and-merge
+trigger: "when doing dependency update and merge"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/gclm/DoIt
+---
+
+# DoIt Workflow Dependency Update And Merge
+
+## Action
+
+Follow the dependency-update-and-merge workflow:
+1. Update dependency version in relevant lock and manifest files (e.g., package.json, package-lock.json, flake.lock)
+2. Commit the changes with a message indicating the dependency bump
+3. Open a pull request for the update
+4. Merge the pull request into the main branch
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: package.json, package-lock.json, flake.lock
+
+---
+id: doit-instinct-file-naming-camelCase
+trigger: "When creating a new file in the codebase"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct File Naming CamelCase
+
+## Action
+
+Name the file using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.files: camelCase
+
+---
+id: doit-instinct-function-naming-camelCase
+trigger: "When defining a new function"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Function Naming CamelCase
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Pattern in namingConventions.functions: camelCase
+
+---
+id: doit-instinct-class-naming-pascalCase
+trigger: "When declaring a new class"
+confidence: 0.85
+domain: code-style
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Class Naming PascalCase
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Pattern in namingConventions.classes: PascalCase
+
+---
+id: doit-instinct-constant-naming-screamingSnakeCase
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Constant Naming ScreamingSnakeCase
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Pattern in namingConventions.constants: SCREAMING_SNAKE_CASE
+
+---
+id: doit-instinct-import-style-relative
+trigger: "When importing modules within the project"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Import Style Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in importStyle: relative
+
+---
+id: doit-instinct-export-style-named
+trigger: "When exporting functions, classes, or constants"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Export Style Named
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in exportStyle: named
+
+---
+id: doit-instinct-test-location-separate
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Test Location Separate
+
+## Action
+
+Place test files in a separate directory from source files
+
+## Evidence
+
+- Pattern in architecture.testLocation: separate
+
+---
+id: doit-instinct-git-commit-prefix-chore
+trigger: "When committing dependency updates or maintenance changes"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Git Commit Prefix Chore
+
+## Action
+
+Prefix the commit message with 'chore' and specify the scope in parentheses
+
+## Evidence
+
+- Seen in commit: chore(deps-dev): bump @playwright/test from 1.59.1 to 1.60.0
+- Seen in commit: chore(deps): bump nixpkgs from `7aaa00e` to `4df1b88`
+
+---
+id: doit-instinct-git-commit-format-dependency-bump
+trigger: "When updating a dependency version"
+confidence: 0.9
+domain: git
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Git Commit Format Dependency Bump
+
+## Action
+
+Format the commit message as 'chore([scope]): bump [package] from [old] to [new]'
+
+## Evidence
+
+- Seen in commit: chore(deps-dev): bump concurrently from 9.2.1 to 10.0.3
+- Seen in commit: chore(deps-dev): bump @tailwindcss/cli from 4.2.4 to 4.3.0
+
+---
+id: doit-instinct-git-merge-dependabot-prs
+trigger: "When merging a dependency update pull request"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Git Merge Dependabot Prs
+
+## Action
+
+Use the default merge commit message referencing the PR and dependency
+
+## Evidence
+
+- Seen in commit: Merge pull request #1648 from HEIGE-PCloud/dependabot/npm_and_yarn/playwright/test-1.60.0
+
+---
+id: doit-instinct-workflow-dependency-update
+trigger: "When someone wants to update a dependency to a newer version"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: gclm/DoIt
+---
+
+# Doit Instinct Workflow Dependency Update
+
+## Action
+
+Update dependency version in package.json, package-lock.json, and/or flake.lock, commit with a 'chore' message, open a pull request, and merge it into main
+
+## Evidence
+
+- Workflow: dependency-update-and-merge
+- Seen in commit sequence and files involved
+
